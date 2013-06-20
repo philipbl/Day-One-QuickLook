@@ -1,44 +1,28 @@
-# MultiMarkdown QuickLook Plugin #
+### MultiMarkdown Quick Look with Style
 
-## Introduction ##
+<https://github.com/ttscoff/MMD-QuickLook>
 
-This is a complete rewrite of the MultiMarkdown version of Phil Toland's QLMarkdown plugin.  The MMD version caused multiple copies of the `multimarkdown` process to spawn and run the CPU usage to 100%.  I'm sure it was something I did, and not a problem with qlmarkdown. 
+This is a quick fork of Fletcher Penney's [MMD Quicklook project][mmdql]. It adds some styling to the default Quick Look preview (based on GitHub CSS) and allows for customization via a `.mdqlstyle.css` file in your home folder.
 
-But in order to fix it, it just made more sense to start over.
+![MultiMarkdown Quicklook with Style][screenshot]
 
-This program allows you to preview a MultiMarkdown text file (or OPML file) in the Finder after converting it to HTML with MMD.
+To install, [download the zip][dl], unarchive and place the `MultiMarkdown QuickLook.qlgenerator` file in `~/Library/QuickLook/`. To make sure the Quick Look generator list reloads with the new file, you can run `qlmanage -r` on the command line.
 
-## Installation ##
+To use a custom style, name the CSS file `.mdqlstyle.css` and place it in your User's home directory. Note the leading period. Default padding for the body class will be included before your styles, so you can pretty much drop in any CSS you want from any source. Use one of the provided files, copy CSS from your blog, your favorite website or build your own.
 
-To install, simply put the "MultiMarkdown QuickLook" file in:
+### Ready-made styles
 
-	~/Library/QuickLook
+A couple of default styles lifted from [Marked.app][marked].
 
-To uninstall, simply remove it.
+* [Swiss](https://raw.github.com/ttscoff/MMD-QuickLook/master/mdqlstyle.swiss.css) ([screenshot][swissshot])
+* [Upstanding Citizen](https://raw.github.com/ttscoff/MMD-QuickLook/master/mdqlstyle.upstandingcitizen.css) ([screenshot][upshot]) (includes custom fonts embedded in the CSS as data URIs)
 
-This version of the QuickLook plugin includes an embedded copy of MultiMarkdown 3.2, as well as `opml2mmd.xslt`.  So there's nothing else to install to get it to work.  The version of mmd that's embedded should run on any Intel Mac.
+![Upstanding Citizen][upcropped]
 
-
-Downloads
----------
-
-Source code is available at <http://github.com/fletcher/MMD-QuickLook>.
-
-You can download a binary release from <https://github.com/fletcher/MMD-QuickLook/downloads>.
-
-
-License
--------
-
-The QLMarkdown code is distributed under the same terms as [peg-multimarkdown].
-
-Known Issues
-------------
-
-Images are not displayed in previews.
-
-
-Version History
----------------
-
-[peg-multimarkdown]: https://github.com/fletcher/peg-multimarkdown
+[mmdql]: https://github.com/fletcher/MMD-QuickLook
+[screenshot]: https://github.com/ttscoff/MMD-QuickLook/raw/master/MMDQLGithub-1.jpg
+[dl]: http://assets.brettterpstra.com/MultiMarkdown%20QuickLook.qlgenerator.zip
+[swissshot]: https://github.com/ttscoff/MMD-QuickLook/raw/master/MMDQLSwiss.jpg
+[upshot]: https://github.com/ttscoff/MMD-QuickLook/raw/master/MMDQLUpstanding.jpg
+[upcropped]: https://github.com/ttscoff/MMD-QuickLook/raw/master/MMDQLUpstandingCropped.jpg
+[marked]: http://markedapp.com

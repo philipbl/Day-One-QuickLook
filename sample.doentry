@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Creation Date</key>
+	<date>2013-06-20T22:39:48Z</date>
+	<key>Entry Text</key>
+	<string>Here is a **test** *entry*.
+
+Here is a [link](http://www.google.com)
+
+| test1 | test2 | test3 |
+|-------|-------|-------|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+
+How about a footnote?[^1]
+
+
+[^1]: Here is a footnote.
+
+	</string>
+	<key>Location</key>
+	<dict>
+		<key>Administrative Area</key>
+		<string>Utah</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Latitude</key>
+		<real>40.768628823608871</real>
+		<key>Locality</key>
+		<string>Salt Lake City</string>
+		<key>Longitude</key>
+		<real>-111.84591843757019</real>
+		<key>Place Name</key>
+		<string>University of Utah</string>
+	</dict>
+	<key>Starred</key>
+	<false/>
+	<key>Time Zone</key>
+	<string>America/Denver</string>
+	<key>UUID</key>
+	<string>C1859ED5927048B0BC6656A032E786B1</string>
+	<key>Weather</key>
+	<dict>
+		<key>Celsius</key>
+		<string>23</string>
+		<key>Description</key>
+		<string>Mostly Sunny</string>
+		<key>Fahrenheit</key>
+		<string>73</string>
+		<key>IconName</key>
+		<string>pcloudy.png</string>
+	</dict>
+</dict>
+</plist>
