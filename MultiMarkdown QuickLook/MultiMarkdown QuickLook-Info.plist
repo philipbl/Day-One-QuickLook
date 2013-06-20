@@ -17,12 +17,7 @@
 			<string>QLGenerator</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>net.daringfireball.markdown</string>
-				<string>net.multimarkdown.text</string>
-				<string>org.vim.markdown-file</string>
-				<string>public.opml</string>
-				<string>net.multimarkdown.opml</string>
-				<string>org.opml.opml</string>
+				<string>com.dayoneapp.entry</string>
 			</array>
 		</dict>
 	</array>
@@ -46,14 +41,14 @@
 	<string>NO</string>
 	<key>CFPlugInFactories</key>
 	<dict>
-		<key>12B11958-4455-4E27-9FAA-A8E5F7E22211</key>
+		<key>FB42AFA8-10D6-48B1-8C0E-D6EF38318198</key>
 		<string>QuickLookGeneratorPluginFactory</string>
 	</dict>
 	<key>CFPlugInTypes</key>
 	<dict>
 		<key>5E2D9680-5022-40FA-B806-43349622E5B9</key>
 		<array>
-			<string>12B11958-4455-4E27-9FAA-A8E5F7E22211</string>
+			<string>FB42AFA8-10D6-48B1-8C0E-D6EF38318198</string>
 		</array>
 	</dict>
 	<key>CFPlugInUnloadFunction</key>
@@ -75,16 +70,16 @@
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>org.opml.opml</string>
+				<string>com.apple.xml-property-list</string>
 			</array>
 			<key>UTTypeIdentifier</key>
-			<string>public.opml</string>
+			<string>com.dayoneapp.entry</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
 				<dict>
 					<key>item 0</key>
-					<string>opml</string>
+					<string>doentry</string>
 				</dict>
 			</dict>
 		</dict>

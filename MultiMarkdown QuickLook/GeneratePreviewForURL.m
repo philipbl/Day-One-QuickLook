@@ -9,10 +9,9 @@
  This function's job is to create preview for designated file
  ----------------------------------------------------------------------------- */
 
-NSData* processMMD(NSURL* url);
-NSData* processOPML2MMD(NSURL* url);
+NSData* processDayOne(NSURL* url);
 
-BOOL logDebug = NO;
+BOOL logDebug = YES;
 
 
 OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview, CFURLRef url, CFStringRef contentTypeUTI, CFDictionaryRef options)
@@ -22,16 +21,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     
     CFDataRef previewData;
     
-    if (CFStringCompare(contentTypeUTI, CFSTR("org.opml.opml"), 0) == kCFCompareEqualTo)
-    {
-        // Preview an OPML file
-        
-        previewData = (CFDataRef) processOPML2MMD((NSURL*) url);
-    } else {
-        // Preview a text file
-        
-        previewData = (CFDataRef) processMMD((NSURL*) url);
-    }
+    previewData = (CFDataRef) processDayOne((NSURL*) url);
     
     if (previewData) {
         if (logDebug)
@@ -44,54 +34,8 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     return noErr;
 }
 
-NSData* processOPML2MMD(NSURL* url)
-{
-    if (logDebug)
-        NSLog(@"create preview for OPML file %@",[url path]);
-    
-    NSString *path2MMD = [[NSBundle bundleWithIdentifier:@"net.fletcherpenney.quicklook"] pathForResource:@"multimarkdown" ofType:nil];
-    
-		NSTask* task = [[NSTask alloc] init];
-		[task setLaunchPath: [path2MMD stringByExpandingTildeInPath]];
-		
-    [task setArguments: [NSArray arrayWithObjects: nil]];
-		
-		NSPipe *writePipe = [NSPipe pipe];
-		NSFileHandle *writeHandle = [writePipe fileHandleForWriting];
-		[task setStandardInput: writePipe];
-		
-		NSPipe *readPipe = [NSPipe pipe];
-		[task setStandardOutput:readPipe];
-		
-		[task launch];
-		
-    
-    NSString *theData = [NSString stringWithContentsOfFile:[url path] encoding:NSUTF8StringEncoding error:nil];
-    
-    NSXMLDocument *opmlDocument = [[NSXMLDocument alloc] initWithXMLString:theData
-																																	 options:0
-																																		 error:nil];
-    NSURL *styleFilePath = [[NSBundle bundleWithIdentifier:@"net.fletcherpenney.quicklook"] URLForResource:@"opml2mmd"
-                                                                                             withExtension:@"xslt"];
-    
-    NSData *mmdContents = [opmlDocument objectByApplyingXSLTAtURL:styleFilePath
-																												arguments:nil 
-																														error:nil];
-    
-    [opmlDocument release];
-    
-		[writeHandle writeData:mmdContents];
-    
-		[writeHandle closeFile];
-		
-		
-		NSData *mmdData = [[readPipe fileHandleForReading] readDataToEndOfFile];
-    
-    [task release];
-		return mmdData;
-}
 
-NSData* processMMD(NSURL* url)
+NSData* processDayOne(NSURL* url)
 {
     if (logDebug)
         NSLog(@"create preview for MMD file %@",[url path]);
@@ -120,6 +64,12 @@ NSData* processMMD(NSURL* url)
     
 		
     NSString *theData = [NSString stringWithContentsOfFile:[url path] usedEncoding:&encoding error:nil];
+    
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<key>Entry Text</key>.*?<string>(.*?)</string>" options:NSRegularExpressionDotMatchesLineSeparators error:&error];
+    NSTextCheckingResult *match = [regex firstMatchInString:theData options:0 range:NSMakeRange(0, [theData length])];
+    NSRange matchRange = [match rangeAtIndex:1];
+    theData = [theData substringWithRange:matchRange];
 
 		NSString *cssDir = @"~/.mdqlstyle.css";
 		if ([[NSFileManager defaultManager] fileExistsAtPath:[cssDir stringByExpandingTildeInPath]]) {
