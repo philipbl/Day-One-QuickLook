@@ -21,14 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5A7859CE1443BDBB00C7C824 /* MultiMarkdown QuickLook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MultiMarkdown QuickLook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7859CE1443BDBB00C7C824 /* Day One QuickLook.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Day One QuickLook.qlgenerator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7859D11443BDBB00C7C824 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		5A7859D31443BDBB00C7C824 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		5A7859D51443BDBB00C7C824 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		5A7859D71443BDBB00C7C824 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		5A7859DB1443BDBB00C7C824 /* MultiMarkdown QuickLook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiMarkdown QuickLook-Info.plist"; sourceTree = "<group>"; };
+		5A7859DB1443BDBB00C7C824 /* Day One QuickLook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Day One QuickLook-Info.plist"; sourceTree = "<group>"; };
 		5A7859DD1443BDBB00C7C824 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5A7859DF1443BDBB00C7C824 /* MultiMarkdown QuickLook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiMarkdown QuickLook-Prefix.pch"; sourceTree = "<group>"; };
+		5A7859DF1443BDBB00C7C824 /* Day One QuickLook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Day One QuickLook-Prefix.pch"; sourceTree = "<group>"; };
 		5A7859E41443BDBB00C7C824 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		5A7859F11443C1A000C7C824 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		5A7859F21443C1A000C7C824 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7859FB1443C54800C7C824 /* Cocoa.framework */,
-				5A7859D91443BDBB00C7C824 /* MultiMarkdown QuickLook */,
+				5A7859D91443BDBB00C7C824 /* Day One QuickLook */,
 				5A7859D01443BDBB00C7C824 /* Frameworks */,
 				5A785A001443C97300C7C824 /* Resources */,
 				5A7859CF1443BDBB00C7C824 /* Products */,
@@ -67,7 +67,7 @@
 		5A7859CF1443BDBB00C7C824 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A7859CE1443BDBB00C7C824 /* MultiMarkdown QuickLook.qlgenerator */,
+				5A7859CE1443BDBB00C7C824 /* Day One QuickLook.qlgenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +83,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A7859D91443BDBB00C7C824 /* MultiMarkdown QuickLook */ = {
+		5A7859D91443BDBB00C7C824 /* Day One QuickLook */ = {
 			isa = PBXGroup;
 			children = (
 				5A7859F11443C1A000C7C824 /* GeneratePreviewForURL.m */,
@@ -91,15 +91,16 @@
 				5A7859E41443BDBB00C7C824 /* main.c */,
 				5A7859DA1443BDBB00C7C824 /* Supporting Files */,
 			);
+			name = "Day One QuickLook";
 			path = "MultiMarkdown QuickLook";
 			sourceTree = "<group>";
 		};
 		5A7859DA1443BDBB00C7C824 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A7859DB1443BDBB00C7C824 /* MultiMarkdown QuickLook-Info.plist */,
+				5A7859DB1443BDBB00C7C824 /* Day One QuickLook-Info.plist */,
 				5A7859DC1443BDBB00C7C824 /* InfoPlist.strings */,
-				5A7859DF1443BDBB00C7C824 /* MultiMarkdown QuickLook-Prefix.pch */,
+				5A7859DF1443BDBB00C7C824 /* Day One QuickLook-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -126,9 +127,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5A7859CD1443BDBB00C7C824 /* MultiMarkdown QuickLook */ = {
+		5A7859CD1443BDBB00C7C824 /* Day One QuickLook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A7859E81443BDBB00C7C824 /* Build configuration list for PBXNativeTarget "MultiMarkdown QuickLook" */;
+			buildConfigurationList = 5A7859E81443BDBB00C7C824 /* Build configuration list for PBXNativeTarget "Day One QuickLook" */;
 			buildPhases = (
 				5A7859C81443BDBB00C7C824 /* Sources */,
 				5A7859C91443BDBB00C7C824 /* Frameworks */,
@@ -140,9 +141,9 @@
 			);
 			dependencies = (
 			);
-			name = "MultiMarkdown QuickLook";
+			name = "Day One QuickLook";
 			productName = "MultiMarkdown QuickLook";
-			productReference = 5A7859CE1443BDBB00C7C824 /* MultiMarkdown QuickLook.qlgenerator */;
+			productReference = 5A7859CE1443BDBB00C7C824 /* Day One QuickLook.qlgenerator */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +154,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = 5A7859C61443BDBB00C7C824 /* Build configuration list for PBXProject "MultiMarkdown QuickLook" */;
+			buildConfigurationList = 5A7859C61443BDBB00C7C824 /* Build configuration list for PBXProject "Day One QuickLook" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -165,7 +166,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A7859CD1443BDBB00C7C824 /* MultiMarkdown QuickLook */,
+				5A7859CD1443BDBB00C7C824 /* Day One QuickLook */,
 			);
 		};
 /* End PBXProject section */
@@ -258,10 +259,10 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MultiMarkdown QuickLook/MultiMarkdown QuickLook-Prefix.pch";
-				INFOPLIST_FILE = "MultiMarkdown QuickLook/MultiMarkdown QuickLook-Info.plist";
+				GCC_PREFIX_HEADER = "MultiMarkdown QuickLook/Day One QuickLook-Prefix.pch";
+				INFOPLIST_FILE = "MultiMarkdown QuickLook/Day One QuickLook-Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Day One QuickLook";
 				WRAPPER_EXTENSION = qlgenerator;
 			};
 			name = Debug;
@@ -274,10 +275,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MultiMarkdown QuickLook/MultiMarkdown QuickLook-Prefix.pch";
-				INFOPLIST_FILE = "MultiMarkdown QuickLook/MultiMarkdown QuickLook-Info.plist";
+				GCC_PREFIX_HEADER = "MultiMarkdown QuickLook/Day One QuickLook-Prefix.pch";
+				INFOPLIST_FILE = "MultiMarkdown QuickLook/Day One QuickLook-Info.plist";
 				INSTALL_PATH = /Library/QuickLook;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Day One QuickLook";
 				WRAPPER_EXTENSION = qlgenerator;
 			};
 			name = Release;
@@ -285,7 +286,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A7859C61443BDBB00C7C824 /* Build configuration list for PBXProject "MultiMarkdown QuickLook" */ = {
+		5A7859C61443BDBB00C7C824 /* Build configuration list for PBXProject "Day One QuickLook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A7859E61443BDBB00C7C824 /* Debug */,
@@ -294,7 +295,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A7859E81443BDBB00C7C824 /* Build configuration list for PBXNativeTarget "MultiMarkdown QuickLook" */ = {
+		5A7859E81443BDBB00C7C824 /* Build configuration list for PBXNativeTarget "Day One QuickLook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A7859E91443BDBB00C7C824 /* Debug */,
